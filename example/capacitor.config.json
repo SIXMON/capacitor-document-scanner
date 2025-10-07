@@ -1,0 +1,11 @@
+{
+  "appId": "com.sixmon.capacitordocumentscanner.demo",
+  "appName": "document-scanner-demo",
+  "bundledWebRuntime": true,
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
