@@ -1,5 +1,6 @@
 import Foundation
 import Capacitor
+import VisionKit
 
 /**
  * This class contains functions that get called when
@@ -8,6 +9,7 @@ import Capacitor
 @available(iOS 13.0, *)
 @objc(DocumentScannerPlugin)
 public class DocumentScannerPlugin: CAPPlugin {
+    private var scanner: DocScanner?
     
     /**
      * No implementation at the moment
@@ -15,9 +17,10 @@ public class DocumentScannerPlugin: CAPPlugin {
      * @param  call contains JS inputs and lets you return results
      */
     @objc func scanDocument(_ call: CAPPluginCall) {
-        // launch the document scanner
-        call.resolve([
-            "status": "cancel"
-        ])
+        let responseType = call.getString("responseType")
+
+        let scanner = DocScanner(plugin: self)
+        self.scanner = scanner
+        scanner.start(call: call, responseType: responseType)
     }
 }
