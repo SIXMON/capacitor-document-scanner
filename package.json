@@ -13,7 +13,7 @@
     "ios/Plugin/",
     "SixmonCapacitorDocumentScanner.podspec"
   ],
-  "author": "David Marcus",
+  "author": "Hugo Millot",
   "license": "MIT",
   "repository": {
     "type": "git",
