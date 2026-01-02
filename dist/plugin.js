@@ -73,8 +73,6 @@ var capacitorDocumentScanner = (function (exports, core) {
 
     exports.DocumentScanner = DocumentScanner;
 
-    Object.defineProperty(exports, '__esModule', { value: true });
-
     return exports;
 
 })({}, capacitorExports);
